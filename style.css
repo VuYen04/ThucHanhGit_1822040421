@@ -1,0 +1,334 @@
+
+/* ==============================
+   OCEAN BLUE - PASTEL DESIGN
+================================ */
+
+/* Cài đặt chung */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Nền đại dương */
+.ocean-background {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    position: relative;
+    overflow: hidden;
+
+    background: linear-gradient(
+        135deg,
+        #dff5ff 0%,
+        #b8e5ff 35%,
+        #a5d8f5 65%,
+        #d7f2ff 100%
+    );
+}
+
+/* Những quả bong bóng */
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    animation: float 6s ease-in-out infinite;
+}
+
+.bubble-1 {
+    width: 100px;
+    height: 100px;
+    top: 12%;
+    left: 10%;
+}
+
+.bubble-2 {
+    width: 55px;
+    height: 55px;
+    top: 25%;
+    right: 15%;
+    animation-delay: 1s;
+}
+
+.bubble-3 {
+    width: 75px;
+    height: 75px;
+    bottom: 15%;
+    left: 18%;
+    animation-delay: 2s;
+}
+
+.bubble-4 {
+    width: 35px;
+    height: 35px;
+    bottom: 25%;
+    right: 12%;
+    animation-delay: 3s;
+}
+
+.bubble-5 {
+    width: 25px;
+    height: 25px;
+    top: 65%;
+    left: 8%;
+    animation-delay: 1.5s;
+}
+
+/* Nội dung chính */
+.container {
+    width: 100%;
+    max-width: 680px;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+/* Biểu tượng đại dương */
+.wave-icon {
+    font-size: 55px;
+    margin-bottom: -25px;
+    position: relative;
+    z-index: 3;
+    animation: wave 3s ease-in-out infinite;
+}
+
+/* Khung chào mừng */
+.welcome-card {
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(12px);
+    padding: 65px 45px 35px;
+    border-radius: 30px;
+    border: 2px solid rgba(255, 255, 255, 0.9);
+
+    box-shadow:
+        0 15px 45px rgba(46, 125, 180, 0.15),
+        0 5px 15px rgba(46, 125, 180, 0.08);
+
+    position: relative;
+    overflow: hidden;
+
+    animation: appear 1s ease;
+}
+
+/* Trang trí góc */
+.decoration {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 28px;
+    color: #76c7ee;
+}
+
+/* Dòng chữ nhỏ */
+.small-title {
+    color: #65aacf;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+/* Tiêu đề chính */
+h1 {
+    color: #1877b9;
+    font-size: 55px;
+    font-weight: 800;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    text-shadow: 2px 3px 0px #d4efff;
+}
+
+/* Đường trang trí */
+.title-decoration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 20px 0 25px;
+}
+
+.title-decoration span:not(.star) {
+    width: 65px;
+    height: 2px;
+    background: #a8dff7;
+    border-radius: 10px;
+}
+
+.star {
+    color: #5db6e5;
+    font-size: 18px;
+}
+
+/* Tiêu đề phụ */
+h2 {
+    color: #376e96;
+    font-size: 23px;
+    line-height: 1.6;
+    font-weight: 650;
+    margin-bottom: 35px;
+}
+
+/* Khung thông tin sinh viên */
+.info-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+
+    background: linear-gradient(
+        120deg,
+        #e6f6ff,
+        #f1faff
+    );
+
+    border: 1px solid #c8eaff;
+    border-radius: 20px;
+    padding: 22px 25px;
+    text-align: left;
+
+    box-shadow: 0 5px 15px rgba(67, 153, 204, 0.08);
+}
+
+/* Biểu tượng sinh viên */
+.info-icon {
+    font-size: 38px;
+    background: #d5efff;
+    width: 65px;
+    height: 65px;
+    min-width: 65px;
+    border-radius: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Thông tin */
+.info-content p {
+    color: #39799f;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 2;
+}
+
+/* Trang trí phía dưới */
+.bottom-decoration {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 30px;
+    color: #83c9eb;
+    font-size: 20px;
+}
+
+/* Footer */
+.footer-text {
+    margin-top: 25px;
+    color: #478bb5;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.footer-text span {
+    margin: 0 8px;
+    color: #7bc9ed;
+}
+
+/* Hiệu ứng chuyển động */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: rotate(-8deg);
+    }
+
+    50% {
+        transform: rotate(8deg);
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive - Điện thoại */
+@media (max-width: 600px) {
+    .ocean-background {
+        padding: 30px 15px;
+    }
+
+    .welcome-card {
+        padding: 55px 20px 30px;
+        border-radius: 24px;
+    }
+
+    h1 {
+        font-size: 43px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .info-card {
+        padding: 18px 12px;
+        gap: 12px;
+    }
+
+    .info-icon {
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+        font-size: 28px;
+    }
+
+    .info-content p {
+        font-size: 14px;
+    }
+
+    .small-title {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .footer-text {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .bubble-1 {
+        width: 60px;
+        height: 60px;
+    }
+
+    .bubble-3 {
+        width: 45px;
+        height: 45px;
+    }
+}
